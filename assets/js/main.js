@@ -124,26 +124,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-/*=============== Form inputs store in file =============*/ 
 
-function getAndUpdate(){
-    // console.log("Update list...")
-    title = document.getElementById("contact__form-name").value
-    mail = document.getElementById("contact__form-email").value
-    desc = document.getElementById("contact__form-desc").value
-
-    if (localStorage.getItem('itemsJson') == null) {
-        itemsJsonArray = [];
-        itemsJsonArray.push([{'name':title, 'mail':mail, "description":desc}]);
-        localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
-    }
-    else{
-        itemsJsonArray = JSON.parse(localStorage.getItem('itemsJson'))
-        itemsJsonArray.push([tit, desc]);
-        localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
-    }
-}
-ad = document.getElementById("add")
         
 ad.addEventListener("click", getAndUpdate)
 /*=============== SCROLL REVEAL ANIMATION ===============*/
